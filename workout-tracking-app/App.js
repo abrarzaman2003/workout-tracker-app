@@ -1,10 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import { Button, StyleSheet, Text, View } from 'react-native';
 import { db } from './backend/firebaseSetup';
+import { createUser, login } from './backend/authentication';
 
 export default function App() {
   const test = async () => {
     console.log("test")
+    login("a@gmail.com","password")
   }
   return (
     <View style={styles.container}>
